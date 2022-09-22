@@ -10,7 +10,7 @@ Não há
 
 # Protótipo
 
-https://www.figma.com/file/EbTROJC1QJBToOZIytXp5R/1%C2%BA?node-id=2%3A6
+https://www.figma.com/file/EbTROJC1QJBToOZIytXp5R/historico-de-pre%C3%A7os?node-id=2%3A4
 
 # Checklist
 
