@@ -1,0 +1,25 @@
+{
+  "name": "historico-de-precos",
+  "version": "1.0.0",
+  "description": "Este projeto tem como objetivo implementar uma aplicação web que permita cadastrar o preço de um produto comprado ou serviço consumido para manter um histórico dos mesmos. No cadastro terá as seguintes informações: descrição, preço, data, estabelecimento/prestador do serviço e forma de pagamento.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mychellmotta/historico-de-precos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mychellmotta/historico-de-precos/issues"
+  },
+  "homepage": "https://github.com/mychellmotta/historico-de-precos#readme",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
