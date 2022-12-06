@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'historico-de-precos';
+  year: number;
+  constructor() {
+    this.year = new Date().getFullYear();
+  }
 }

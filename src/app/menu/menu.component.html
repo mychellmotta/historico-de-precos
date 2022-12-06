@@ -9,7 +9,9 @@
           <i class="material-icons">menu</i>
         </a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#" class="flow-text">Novo</a></li>
+          <li><a [routerLink]="''" class="flow-text">Início</a></li>
+          <li><a [routerLink]="'/new'" class="flow-text">Novo</a></li>
+          <li><a [routerLink]="'/new/110'" class="flow-text">Novo com parâmetro</a></li>
         </ul>
       </div>
     </div>
@@ -26,6 +28,8 @@
         </div>
       </div>
     </div>
-    <li><a href="#" class="flow-text">Novo</a></li>
+    <li><a [routerLink]="''" class="flow-text">Início</a></li>
+    <li><a [routerLink]="'/new'" class="flow-text">Novo</a></li>
+    <li><a [routerLink]="'/new/110'" class="flow-text">Novo com parâmetro</a></li>
   </ul>
 </div>
