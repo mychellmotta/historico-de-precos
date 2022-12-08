@@ -1,0 +1,87 @@
+<div class="container contact">
+  <h5>Cadastro de fornecedores</h5>
+  <h6>Entre com os dados do fornecedor/prestador de serviço</h6>
+  <hr />
+  <div class="row">
+    <div class="col s12">
+      <div
+        id="msg-login"
+        class="card-panel white-text"
+        [class.red]="!this.isSuccess"
+        [class.blue]="this.isSuccess"
+        *ngIf="this.isShowMessage"
+      >
+        {{ this.message }}
+      </div>
+    </div>
+    <form class="col s12" #form="ngForm" (submit)="onSubmit()">
+      <div class="input-field col s12">
+        <input
+          id="input-name"
+          name="input-name"
+          type="text"
+          class="validate"
+          [(ngModel)]="this.store.name"
+          pattern="^(\s?[A-ZÀ-Ú0-9][a-zà-ú0-9]*)+(\s[a-zà-ú0-9]*)?(\s[A-ZÀ-Ú0-9][a-zà-ú0-9]*)+"
+          #name="ngModel"
+          required
+        />
+        <label for="input-name">Nome *</label>
+        <div class="red-text" [hidden]="name.valid || name.untouched">
+          Por favor, informe corretamente o nome do fornecedor/prestador de serviço
+        </div>
+      </div>
+
+      <button
+        class="btn waves-effect waves-light blue-grey darken-4"
+        type="submit"
+        [disabled]="!form.valid"
+      >
+        Enviar
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
+  </div>
+
+  <!-- Tabela de fornecedores -->
+  <h5>Fornecedores cadastrados</h5>
+  <table class="highlight" *ngIf="stores && stores!.length > 0">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let s of stores">
+        <td>{{ s.name }}</td>
+        <td class="right">
+          <a
+            ><i class="material-icons my-icon-size" (click)="onEdit(s)"
+              >edit</i
+            ></a
+          >
+          <a
+            ><i
+              class="material-icons my-icon-size"
+              (click)="onDelete(s.name)"
+              >delete</i
+            ></a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!stores || stores!.length == 0">
+    <div class="row">
+      <div class="center-align">
+        <i class="col s12 material-icons large">mood_bad</i>
+        <span class="col s12 flow-text"
+          >Ainda não temos fornecedores cadastrados!</span
+        >
+      </div>
+    </div>
+  </div>
+</div>

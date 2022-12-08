@@ -5,8 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
 import { LandPageComponent } from './land-page/land-page.component';
 import { NewEntryComponent } from './new-entry/new-entry.component';
+import { StoreComponent } from './store/store.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { NewEntryComponent } from './new-entry/new-entry.component';
     MenuComponent,
     FooterComponent,
     LandPageComponent,
-    NewEntryComponent
+    NewEntryComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
