@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "name": "Maçã",
+      "price": 20
+    },
+    {
+      "id": "3",
+      "name": "Abaxaci",
+      "price": 15
+    },
+    {
+      "name": "Maçã",
+      "price": 20,
+      "id": "297"
+    },
+    {
+      "name": "Maçã",
+      "price": 20,
+      "id": "853"
+    },
+    {
+      "name": "Maçã",
+      "price": 20,
+      "id": "802"
+    },
+    {
+      "name": "Abaxaci",
+      "price": 15,
+      "id": "100"
+    },
+    {
+      "name": "Teste",
+      "price": 11,
+      "id": "172"
+    },
+    {
+      "name": "Teste",
+      "price": 23,
+      "id": "533"
+    }
+  ]
+}
