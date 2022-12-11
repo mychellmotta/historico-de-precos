@@ -56,7 +56,7 @@
           type="submit"
           [disabled]="!form.valid"
         >
-          Enviar
+          Salvar
           <i class="material-icons right">send</i>
         </button>
       </form>
@@ -76,7 +76,7 @@
       <tbody>
         <tr *ngFor="let p of products">
           <td>{{ p.id }} - {{ p.name }}</td>
-          <td>R$ {{ p.price }}</td>
+          <td>{{ p.price | currency: "BRL" }}</td>
           <td class="right">
          <!--    <a
               ><i class="material-icons my-icon-size" (click)="onEdit(p)"

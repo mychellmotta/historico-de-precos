@@ -16,19 +16,29 @@
       "id": "297"
     },
     {
-      "name": "Maçã",
-      "price": 20,
-      "id": "853"
-    },
-    {
-      "name": "Maçã",
-      "price": 20,
-      "id": "802"
-    },
-    {
       "name": "Abaxaci",
       "price": 15,
       "id": "100"
+    },
+    {
+      "name": "Teste",
+      "price": 1,
+      "id": "550"
+    },
+    {
+      "name": "Teste",
+      "price": 2,
+      "id": "328"
+    },
+    {
+      "name": "Abac",
+      "price": 10,
+      "id": "540"
+    },
+    {
+      "name": "Macarrão",
+      "price": 2,
+      "id": "730"
     }
   ]
 }

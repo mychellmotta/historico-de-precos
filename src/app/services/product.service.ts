@@ -1,12 +1,13 @@
-import { Product } from './../model/product';
+import { ErrorUtil } from './../util/error-util';
+import { Product } from '../model/product';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { firstValueFrom, Observable } from 'rxjs';
+import { catchError, firstValueFrom, Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ProductPromiseService {
+export class ProductService {
   URL = 'http://localhost:3000/products';
   URL_PT = 'http://localhost:3000/produtos';
   products!: Product[];
@@ -17,16 +18,27 @@ export class ProductPromiseService {
 
   constructor(private httpClient: HttpClient) {  }
 
+  //getAll(): Observable<Product[]>{
+  //  return this.httpClient.get<Product[]>(`${this.URL}`);
+  //}
+
   getAll(): Observable<Product[]>{
-    return this.httpClient.get<Product[]>(`${this.URL}`);
+    return this.httpClient.get<Product[]>(`${this.URL}`)
+    .pipe(catchError(ErrorUtil.handleError));
   }
 
-  getById(id: string) {
-    return this.httpClient.get<Product>(`${this.URL}/${id}`);
+  getById(id: string): Observable<Product> {
+    return this.httpClient.get<Product>(`${this.URL}/${id}`)
+    .pipe(catchError(ErrorUtil.handleError));
   }
 
-  delete(id: string): Observable<{}>{
-    return this.httpClient.delete(`${this.URL}/${id}`);
+  //delete(id: string): Observable<{}>{
+  //  return this.httpClient.delete(`${this.URL}/${id}`);
+  // }
+
+  delete(id: string): Observable<any>{
+    return this.httpClient.delete(`${this.URL}/${id}`)
+    .pipe(catchError(ErrorUtil.handleError));
   }
 
   save(product: Product) {
