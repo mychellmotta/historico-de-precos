@@ -1,12 +1,12 @@
 # historico-de-precos
 
-Este projeto tem como objetivo implementar uma aplicação web que permita cadastrar o preço de um produto comprado ou serviço consumido para manter um histórico dos mesmos. No cadastro terá as seguintes informações: descrição, preço, data, estabelecimento/prestador do serviço e forma de pagamento.
+Este projeto tem como objetivo implementar uma aplicação web que permita cadastrar o preço de um produto comprado ou serviço consumido para manter um histórico dos mesmos. No cadastro terá as seguintes informações: descrição, preço, data e estabelecimento/prestador do serviço.
 
-O frontend da aplicação será desenvolvido com Angular.
+O frontend da aplicação foi desenvolvido com Angular. O backend é JSON Server que simula uma API REST.
 
 # Endereço de deploy - GitHub Pages
 
-Não há
+https://mychellmotta.github.io/historico-de-precos/
 
 # Protótipo
 
@@ -31,4 +31,4 @@ https://www.figma.com/file/EbTROJC1QJBToOZIytXp5R/historico-de-pre%C3%A7os?node-
 - [x] Apresentar uma lista de dados com a diretiva estrutural ngFor.
 - [x] Usar a diretiva ngIf
 - [x] Formatar a apresentação de dados com Pipes.
-- [ ] Build e deploy da aplicação.
+- [x] Build e deploy da aplicação.

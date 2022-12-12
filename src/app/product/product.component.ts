@@ -23,9 +23,14 @@ export class ProductComponent implements OnInit {
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.product = new Product('', 0);
+    this.product = new Product('', 0, '');
     this.productService.getAll().subscribe((p) => {
       this.products = p;
+    },
+    (error) => {
+      this.isSuccess = false;
+      this.message = error.message + ' O servidor está rodando?';
+      this.isShowMessage = true;
     });
   }
 
@@ -41,16 +46,20 @@ export class ProductComponent implements OnInit {
         this.isSuccess = true;
         this.message = 'Cadastro realizado com sucesso!';
         this.form.reset();
-        this.product = new Product('', 0);
+        this.product = new Product('', 0, '');
         this.productService.getAll().subscribe((p) => {
           this.products = p;
+        },
+        (error) => {
+          this.isSuccess = false;
+          this.message = error.message + ' O servidor está rodando?';
+          this.isShowMessage = true;
         });
       })
       .catch((e) => {
-        // alert('Houve um erro ao gravar os dados! Descrição: ' + e);
         this.isShowMessage = true;
         this.isSuccess = false;
-        this.message = 'Erro ao realizar cadastro!';
+        this.message = 'Erro ao realizar cadastro! ' + e.message;
       });
   }
 
@@ -72,9 +81,8 @@ export class ProductComponent implements OnInit {
         this.products = this.products.filter((p) => p.id !== product.id);
       },
       (error) => {
-        this.message = 'Erro ao excluir!';
         this.isSuccess = false;
-        this.message = error.message;
+        this.message = 'Erro ao excluir! ' + error.message;
         this.isShowMessage = true;
       }
     );
